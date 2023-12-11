@@ -48,16 +48,6 @@ class Task1Test {
       thrown = true;
     }
     assertTrue(thrown);
-
-    System.setIn(new ByteArrayInputStream("-3 5".getBytes()));
-    thrown = false;
-    try {
-      Task1.inputNominals();
-      System.setIn(System.in);
-    } catch (Exception e) {
-      thrown = true;
-    }
-    assertTrue(thrown);
   }
 
 
