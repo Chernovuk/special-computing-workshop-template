@@ -47,20 +47,21 @@ public class Task1 {
     Scanner scanner = new Scanner(System.in);
     String str = scanner.nextLine();
 
-    if (str.matches("(\\d+\\s*)+")) {
-      String[] denominations = str.split(" ");
+    String[] denominations = str.split(" ");
 
-      long[] nominals = new long[denominations.length];
+    long[] nominals = new long[denominations.length];
 
-      for (int i = 0; i < nominals.length; ++i) {
+    for (int i = 0; i < nominals.length; ++i) {
+      try {
         nominals[i] = Long.parseLong(denominations[i]);
+      } catch (IllegalArgumentException exception) {
+        throw new IllegalArgumentException("Input error. Nominals should be positive numbers, "
+                + "separated by a space symbol!");
       }
-
-      return nominals;
     }
 
-    throw new IllegalArgumentException("Input error. Nominals should be positive numbers, "
-            + "separated by a space symbol!");
+    return nominals;
+
   }
 
   /**
