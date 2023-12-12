@@ -50,25 +50,11 @@ class Task1Test {
     assertTrue(thrown);
   }
 
-
-  @Test
-  void shrinkNominals() {
-
-    int n = 5;
-    long[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-    long[] expected = {1, 2, 3, 4, 5};
-    long[] actual = Task1.shrinkNominals(array, n);
-
-    assertArrayEquals(expected, actual);
-  }
-
-
   @Test
   void modifyNominals() {
 
     long sumForExchange = 7;
-    long[] nominals = {6, 2, 5, 10, 7, 2, 20};
+    long[] nominals = {6, 2, 5, 6, 7, 2};
     long[] expected = {2, 5, 6, 7};
     long[] actual = Task1.modifyNominals(sumForExchange, nominals);
     assertArrayEquals(expected, actual);
@@ -78,6 +64,15 @@ class Task1Test {
     try {
       Task1.modifyNominals(sumForExchange, nominals1);
     } catch (Exception e) {
+      thrown = true;
+    }
+    assertTrue(thrown);
+
+    thrown = false;
+    long[] nominals2  = {5, 2, 10, 8, 1};
+    try {
+      Task1.modifyNominals(sumForExchange, nominals2);
+    }  catch (Exception e) {
       thrown = true;
     }
     assertTrue(thrown);

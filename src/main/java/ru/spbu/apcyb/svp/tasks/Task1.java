@@ -65,22 +65,6 @@ public class Task1 {
   }
 
   /**
-   * Method for deleting excessive last elements.
-   *
-   * @param nominals array of nominals
-   * @param n new size of our array
-   * @return array of nominals with new length n
-   */
-  public static long[] shrinkNominals(long[] nominals, int n) {
-
-    long[] shrunkNominals = new long[n];
-
-    System.arraycopy(nominals, 0, shrunkNominals, 0, n);
-
-    return shrunkNominals;
-  }
-
-  /**
    * Method for modifying array of nominals - deleting all needless values.
    *
    * @param sumForExchange initial sum for exchange
@@ -95,12 +79,12 @@ public class Task1 {
       throw new IllegalArgumentException("Input error. Nominals can't be negative!");
     }
 
-    //Deleting nominals greater than sumForExchange
-    int i = 0;
-    while (i < nominals.length && sumForExchange >= nominals[i]) {
-      ++i;
+    for (int i = nominals.length - 1; i >= 0; --i) {
+      if (nominals[i] > sumForExchange) {
+        throw new IllegalArgumentException("Input error. "
+               + "Nominals can't be greater than sum for exchange");
+      }
     }
-    nominals = shrinkNominals(nominals, i);
 
     //Deleting duplicates of available nominals
     nominals = Arrays.stream(nominals).distinct().toArray();
