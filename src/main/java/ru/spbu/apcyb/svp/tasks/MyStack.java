@@ -84,37 +84,37 @@ public class MyStack extends java.util.Stack<Object> implements Serializable {
 
   @Override
   public synchronized boolean addAll(Collection<?> c) throws UnsupportedOperationException {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("This operation isn't implemented yet.");
   }
 
   @Override public synchronized void clear() throws UnsupportedOperationException {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("This operation isn't implemented yet.");
   }
 
   @Override
   public synchronized boolean equals(Object o) throws UnsupportedOperationException {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("This operation isn't implemented yet.");
   }
 
   @Override public synchronized Iterator<Object> iterator() throws UnsupportedOperationException {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("This operation isn't implemented yet.");
   }
 
   @Override
   public synchronized int hashCode() throws UnsupportedOperationException {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("This operation isn't implemented yet.");
   }
 
   @Override
   public synchronized int search(Object o) throws UnsupportedOperationException {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("This operation isn't implemented yet.");
   }
 
   @Override public synchronized boolean remove(Object o) throws UnsupportedOperationException {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("This operation isn't implemented yet.");
   }
 
   @Override public synchronized Object remove(int index) throws UnsupportedOperationException {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("This operation isn't implemented yet.");
   }
 }

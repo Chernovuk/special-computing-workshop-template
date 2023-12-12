@@ -53,7 +53,7 @@ public class MyArrayList implements List<Object> {
   @Override
   public boolean add(Object element) {
     if (element == null) {
-      throw new NullPointerException();
+      throw new NullPointerException("The element is null!");
     }
     try {
       if (size == data.length) {
@@ -82,7 +82,7 @@ public class MyArrayList implements List<Object> {
       throw new IndexOutOfBoundsException("Index is out of bounds!");
     }
     if (element == null) {
-      throw new NullPointerException();
+      throw new NullPointerException("The element is null!");
     }
 
     try {
