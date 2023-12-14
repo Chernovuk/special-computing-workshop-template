@@ -17,7 +17,7 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Тесты для задания 4.
+ * Tests for Task4.
  */
 class Task4Test {
   @Test
